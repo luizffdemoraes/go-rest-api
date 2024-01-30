@@ -1,11 +1,16 @@
 package controllers
 
-
 import (
-    "fmt"
-    "net/http"
+	"encoding/json"
+	"fmt"
+	"go-rest-api/models"
+	"net/http"
 )
 
 func Home(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprint(w, "Home Page")
+	fmt.Fprint(w, "Home Page")
+}
+
+func TodasPersonalidades(w http.ResponseWriter, r *http.Request) {
+	json.NewEncoder(w).Encode(models.Personalidades)
 }
