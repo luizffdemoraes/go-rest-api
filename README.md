@@ -61,6 +61,15 @@ Instalar o driver do postgres
 
 ```go get gorm.io/driver/postgres```
 
+
+### 🪲 Erro.: 
+
+```failed to initialize database, got error failed to connect to `host=localhost user=root database=root`: failed SASL auth (FATAL: autenticação do tipo password falhou para usuario "root" (SQLSTATE 28P01))```
+
+### 🔨 Correção.:
+
+CTRL + ALT + DEL > Gerenciador de Tarefas > Serviços > postgresql-x e parando o Postgres
+
 ### 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
