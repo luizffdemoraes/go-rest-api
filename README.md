@@ -49,6 +49,18 @@ O comando docker é utilizado para obter informações detalhadas sobre o contê
 
 ```docker inspect 805b500dfa2a | Select-String "IPAddress"```
 
+<h2 align="center">
+Conexão com banco e exibindo os dados
+</h2>
+
+Instalar o gorm
+
+```go get -u gorm.io/gorm```
+
+Instalar o driver do postgres
+
+```go get gorm.io/driver/postgres```
+
 ### 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
