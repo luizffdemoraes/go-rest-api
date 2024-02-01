@@ -79,6 +79,16 @@ Instalar o driver do postgres
 
 CTRL + ALT + DEL > Gerenciador de Tarefas > Serviços > postgresql-x e parando o Postgres
 
+<h2 align="center">
+Criando, deletando e editando com Gorm
+</h2>
+
+* Adicionamos um endpoint com método Post para criar uma nova personalidade e salvá-la no banco de dados;
+* Adicionamos um endpoint com método Delete para deletar uma personalidade e removê-la do banco de dados;
+* Adicionamos um endpoint com método Put para atualizar uma personalidade e alterá-la no banco de dados.
+
+
+
 ### 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
