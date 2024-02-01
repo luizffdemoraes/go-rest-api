@@ -89,6 +89,8 @@ Criando, deletando e editando com Gorm
 
 
 
+```go get github.com/gorilla/handlers``` 
+
 ### 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
