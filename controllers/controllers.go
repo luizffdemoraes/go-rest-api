@@ -6,7 +6,6 @@ import (
 	"go-rest-api/database"
 	"go-rest-api/models"
 	"net/http"
-	"strconv"
 
 	"github.com/gorilla/mux"
 )
@@ -16,18 +15,17 @@ func Home(w http.ResponseWriter, r *http.Request) {
 }
 
 func TodasPersonalidades(w http.ResponseWriter, r *http.Request) {
-	var p []models.Personalidade
-	database.DB.Find(&p)
-	json.NewEncoder(w).Encode(models.Personalidades)
+	var personalidades []models.Personalidade
+
+	database.DB.Find(&personalidades)
+	json.NewEncoder(w).Encode(personalidades)
 }
 
 func RetornaUmaPersonalidade(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	id := vars["id"]
+	var personalidade models.Personalidade
 
-	for _, personalidade := range models.Personalidades {
-		if strconv.Itoa(personalidade.Id) == id {
-			json.NewEncoder(w).Encode(personalidade)
-		}
-	}
+	database.DB.First(&personalidade, id)
+	json.NewEncoder(w).Encode(personalidade)
 }
