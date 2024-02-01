@@ -25,6 +25,16 @@ Roteador, recursos por ID e Docker
 * Retornamos um único recurso através do id;
 * Criamos uma imagem do banco de dados Postgres com Docker e executamos um script SQL que adicionava alguns registros em nosso banco de dados.
 
+O pacote gorilla/mux implementa um roteador de requisições e respostas para corresponder às solicitações de entrada ao seu respectivo manipulador ou handler.
+
+<h2 align="center">
+Conexão com banco e exibindo os dados
+</h2>
+
+* Instalamos o Gorm;
+* Realizamos a conexão da API com banco de dados;
+* Alteramos as funções do controller para exibir as informações do banco de dados.
+
 <h2 align="center">
 Comandos Docker utilizados.:
 </h2>
@@ -61,12 +71,11 @@ Instalar o driver do postgres
 
 ```go get gorm.io/driver/postgres```
 
-
-### 🪲 Erro.: 
+🪲 Erro.: 
 
 ```failed to initialize database, got error failed to connect to `host=localhost user=root database=root`: failed SASL auth (FATAL: autenticação do tipo password falhou para usuario "root" (SQLSTATE 28P01))```
 
-### 🔨 Correção.:
+ 🔨 Correção.:
 
 CTRL + ALT + DEL > Gerenciador de Tarefas > Serviços > postgresql-x e parando o Postgres
 
